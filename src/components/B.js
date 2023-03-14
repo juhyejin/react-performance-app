@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useCallback} from "react";
 
 const Message = React.memo(({message})=> {
   return <p>{message}</p>
@@ -25,8 +25,8 @@ const List = React.memo(({posts}) =>{
 
 const B = ({message, posts}) => {
   console.log("B component rendering")
-  const testFunction = () => {
-  }
+  const testFunction = useCallback(() => {}, [],);
+
   return (
     <div>
       <h1>B Components</h1>
